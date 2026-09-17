@@ -1,122 +1,175 @@
 <!doctype html>
 <html lang="de">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Elenora Rachor und Volker Schwinghammer bieten Workshops und Beratung zu Extremismusprävention und politischer Bildung an." />
-    <title>Rachor & Schwinghammer | Extremismus verstehen. Handlungssicherheit gewinnen.</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="styles.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Demokratie stärken – Resilienz gegen politischen Extremismus aufbauen. Ein Bildungsangebot von Eleonora Rachor und Volker Schwinghammer.">
+    <title>Demokratie stärken | Rachor &amp; Schwinghammer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+    <style>
+      :root {
+        --navy: #10265f;
+        --blue: #1474b9;
+        --green: #31a643;
+        --yellow: #f7ce18;
+        --red: #e5231c;
+        --ink: #1b2430;
+        --muted: #5d6877;
+        --paper: #f7f9fc;
+        --line: #dfe5ed;
+        --sans: "DM Sans", sans-serif;
+        --display: "Space Grotesk", sans-serif;
+      }
+
+      * { box-sizing: border-box; }
+      html { scroll-behavior: smooth; }
+      body { margin: 0; background: var(--paper); color: var(--ink); font-family: var(--sans); line-height: 1.7; }
+      a { color: inherit; }
+      .site-header { align-items: center; background: rgba(247, 249, 252, .94); border-bottom: 1px solid var(--line); display: flex; justify-content: space-between; padding: 18px clamp(22px, 6vw, 96px); position: sticky; top: 0; z-index: 10; }
+      .logo { display: block; width: 210px; }
+      .logo img { display: block; height: auto; width: 100%; }
+      nav { display: flex; gap: clamp(18px, 3vw, 42px); }
+      nav a { color: var(--navy); font-size: 13px; font-weight: 700; text-decoration: none; }
+      nav a:hover { color: var(--red); }
+      .hero { background: white; border-bottom: 1px solid var(--line); overflow: hidden; padding: clamp(62px, 9vw, 130px) clamp(22px, 11vw, 170px) clamp(70px, 9vw, 130px); position: relative; }
+      .hero:after { background: linear-gradient(135deg, var(--yellow) 0 25%, var(--green) 25% 50%, var(--blue) 50% 75%, var(--red) 75%); border-radius: 50%; content: ""; height: 420px; opacity: .11; position: absolute; right: -120px; top: -170px; width: 420px; }
+      .eyebrow { color: var(--red); font-size: 12px; font-weight: 700; letter-spacing: .12em; margin: 0 0 22px; text-transform: uppercase; }
+      h1, h2, h3 { font-family: var(--display); line-height: 1.08; }
+      h1 { color: var(--navy); font-size: clamp(42px, 7vw, 86px); letter-spacing: -.06em; margin: 0; max-width: 1000px; }
+      h1 span { color: var(--green); display: block; }
+      .hero-byline { color: var(--muted); font-size: 16px; font-weight: 600; margin: 27px 0 0; }
+      .hero-rule { background: linear-gradient(90deg, var(--navy), var(--blue), var(--green), var(--yellow), var(--red)); height: 5px; margin-top: 55px; max-width: 600px; width: 100%; }
+      .layout { display: grid; gap: clamp(40px, 7vw, 110px); grid-template-columns: minmax(0, 1fr) 275px; margin: 0 auto; max-width: 1250px; padding: clamp(62px, 8vw, 112px) clamp(22px, 5vw, 70px); }
+      .content { min-width: 0; }
+      .intro { font-size: clamp(19px, 2.1vw, 25px); line-height: 1.5; margin: 0 0 42px; }
+      .content p { margin: 0 0 24px; }
+      .content a { color: var(--blue); font-weight: 700; }
+      .content a:hover { color: var(--red); }
+      .section { border-top: 1px solid var(--line); margin-top: 58px; padding-top: 43px; }
+      h2 { color: var(--navy); font-size: clamp(27px, 3.3vw, 43px); letter-spacing: -.045em; margin: 0 0 25px; }
+      h2 .accent { color: var(--red); }
+      h3 { color: var(--navy); font-size: 20px; margin: 36px 0 14px; }
+      ol { margin: 24px 0 28px; padding-left: 28px; }
+      li { margin: 13px 0; padding-left: 6px; }
+      li::marker { color: var(--red); font-family: var(--display); font-weight: 700; }
+      .background { background: white; border-left: 5px solid var(--green); margin: 30px 0 0; padding: 27px 30px; }
+      .background p:last-child { margin-bottom: 0; }
+      .audience-list { display: grid; gap: 0 30px; grid-template-columns: repeat(2, minmax(0, 1fr)); list-style: none; margin: 26px 0; padding: 0; }
+      .audience-list li { border-bottom: 1px solid var(--line); margin: 0; padding: 13px 0 13px 22px; position: relative; }
+      .audience-list li:before { background: var(--yellow); border-radius: 50%; content: ""; height: 8px; left: 0; position: absolute; top: 24px; width: 8px; }
+      .sidebar { align-self: start; position: sticky; top: 105px; }
+      .sidebar-card { background: var(--navy); color: white; overflow: hidden; padding: 30px; position: relative; }
+      .sidebar-card:before { background: linear-gradient(90deg, var(--blue), var(--green), var(--yellow), var(--red)); content: ""; height: 7px; left: 0; position: absolute; right: 0; top: 0; }
+      .sidebar-card h2 { color: white; font-size: 25px; margin-top: 8px; }
+      .sidebar-card p { color: rgba(255,255,255,.76); font-size: 14px; }
+      .sidebar-nav { border-left: 1px solid var(--line); display: flex; flex-direction: column; gap: 11px; margin-top: 30px; padding-left: 18px; }
+      .sidebar-nav a { color: var(--muted); font-size: 13px; text-decoration: none; }
+      .sidebar-nav a:hover { color: var(--navy); }
+      .footer { background: var(--navy); color: white; display: flex; gap: 30px; justify-content: space-between; padding: 34px clamp(22px, 6vw, 96px); }
+      .footer p { font-size: 12px; margin: 0; opacity: .74; }
+      .footer .footer-title { color: white; font-family: var(--display); font-size: 17px; font-weight: 600; opacity: 1; }
+      @media (max-width: 800px) {
+        .site-header { padding: 14px 22px; }
+        .logo { width: 165px; }
+        nav { gap: 16px; }
+        nav a { font-size: 11px; }
+        .layout { display: block; }
+        .sidebar { margin-top: 50px; position: static; }
+      }
+      @media (max-width: 560px) {
+        nav a:not(:last-child) { display: none; }
+        .hero:after { height: 250px; right: -130px; top: -100px; width: 250px; }
+        .hero-rule { margin-top: 38px; }
+        .background { padding: 22px; }
+        .audience-list { display: block; }
+        .footer { display: block; }
+        .footer p + p { margin-top: 8px; }
+      }
+    </style>
   </head>
   <body>
     <header class="site-header">
-      <a class="brand" href="#start" aria-label="Rachor und Schwinghammer Startseite">
-        <span class="brand-mark">R<span>&amp;</span>S</span>
-        <span class="brand-name">Rachor <i>&amp;</i><br />Schwinghammer</span>
+      <a class="logo" href="#start" aria-label="Demokratie stärken Startseite">
+        <img src="images/Logo.png" alt="Demokratie stärken – Resilienz gegen Extremismus">
       </a>
-      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-nav">Menü <span>+</span></button>
-      <nav id="main-nav" class="main-nav" aria-label="Hauptnavigation">
+      <nav aria-label="Seitennavigation">
         <a href="#angebot">Angebot</a>
-        <a href="#ueber-uns">Über uns</a>
-        <a href="#arbeitsweise">Arbeitsweise</a>
-        <a class="nav-cta" href="#kontakt">Gespräch anfragen <span>↗</span></a>
+        <a href="#hintergrund">Hintergrund</a>
+        <a href="#zielgruppen">Zielgruppen</a>
       </nav>
     </header>
 
-    <main>
-      <section id="start" class="hero section-pad">
-        <div class="hero-copy reveal">
-          <p class="eyebrow"><span class="eyebrow-dot"></span> Politische Bildung &amp; Prävention</p>
-          <h1>Extremismus<br /><em>verstehen.</em><br />Handeln können.</h1>
-          <p class="hero-intro">Wir schaffen Räume, in denen junge Menschen, Fachkräfte und Teams sicher über Radikalisierung, Ideologien und demokratische Haltung sprechen können.</p>
-          <div class="hero-actions">
-            <a class="button button-dark" href="#kontakt">Workshop anfragen <span>↗</span></a>
-            <a class="text-link" href="#angebot">Unser Angebot <span>↓</span></a>
+    <main id="start">
+      <section class="hero">
+        <p class="eyebrow">Bildungsangebot für Demokratie und Prävention</p>
+        <h1>Demokratie stärken –<span>Resilienz gegen politischen Extremismus aufbauen</span></h1>
+        <p class="hero-byline">Eleonora Rachor &amp; Volker Schwinghammer</p>
+        <div class="hero-rule" aria-hidden="true"></div>
+      </section>
+
+      <div class="layout">
+        <article class="content">
+          <p class="intro">Extremistische Ideologien – ob religiös, rechts- oder linksextrem motiviert – gefährden demokratische Werte, gesellschaftlichen Zusammenhalt und ein respektvolles Miteinander. Bildungseinrichtungen kommt daher eine wichtige Rolle in der Demokratiebildung und Extremismusprävention zu <a href="https://www.bka.de/DE/Presse/Listenseite_Pressemitteilungen/2026/Presse2026/260609_PM_PMK2025.html" target="_blank" rel="noopener noreferrer">(ca. 86.000 politisch motivierte Straftaten in 2025)</a>.</p>
+
+          <section id="angebot" class="section">
+            <h2>Genau hier setzt unser Angebot <span class="accent">„Demokratie stärken – Resilienz gegen Extremismus!“</span> an.</h2>
+            <p>Das Bildungsangebot befähigt Lernende sowie Multiplikatorinnen und Multiplikatoren dazu,</p>
+            <ol>
+              <li>extremistische Narrative und Ideologien zu erkennen und kritisch zu hinterfragen,</li>
+              <li>demokratische Werte zu verstehen und einzuordnen, manipulative Strategien extremistischer Akteure und Gruppierungen zu durchschauen,</li>
+              <li>gesellschaftliche Zugehörigkeit und demokratische Teilhabe zu stärken sowie</li>
+              <li>individuelle Resilienz sowie Handlungssicherheit im Umgang mit extremistischen und demokratiefeindlichen Positionen aufzubauen.</li>
+            </ol>
+          </section>
+
+          <section id="hintergrund" class="section">
+            <h2>Entstehung und <span class="accent">fachlicher Hintergrund</span></h2>
+            <div class="background">
+              <p>Die Grundlage des Projekts bildet die Masterarbeit von <strong>Eleonora Rachor (Diplom-Germanistin und M.A. Fremdsprachenlinguistin)</strong>, mit dem Titel <em>„Frühzeitig vorbeugen: Erstellung und experimentelle Durchführung eines Unterrichtsmoduls in den Integrationskursen zur Prävention von salafistischer Radikalisierung“</em>.</p>
+              <p>Im Rahmen dieser Arbeit entwickelte sie ein modular aufgebautes und flexibel einsetzbares Curriculum sowie ein Lehrerhandbuch mit dazugehörigen Arbeitsmaterialien. Die Arbeit entstand während ihrer Tätigkeit als wissenschaftliche Hilfskraft in einem Projekt im Rahmen des <strong>Bundesprogramms „Demokratie leben!“</strong></p>
+              <p>Gemeinsam mit <strong>Volker Schwinghammer (Dipl. Sozialarbeiter, Trauma- und integrativer Lerntherapeut)</strong> wurde das ursprüngliche Konzept weiterentwickelt, um zusätzliche Erscheinungsformen des Extremismus und aktuelle gesellschaftliche Herausforderungen ergänzt und für unterschiedliche Bildungsbereiche und Zielgruppen aufbereitet.</p>
+            </div>
+          </section>
+
+          <section id="zielgruppen" class="section">
+            <h2>Die <span class="accent">Zielgruppen</span></h2>
+            <p>Das Bildungsangebot richtet sich an unterschiedliche Alters- und Zielgruppen in staatlichen und gemeinnützigen Bildungseinrichtungen. Ein Einsatz ist – entsprechend dem jeweiligen Entwicklungsstand und mit altersgerechter methodisch-didaktischer Anpassung – bereits ab der 4. Jahrgangsstufe der Grundschule möglich.</p>
+            <p>Darüber hinaus eignet sich das Konzept unter anderem für</p>
+            <ul class="audience-list">
+              <li>Mittel-, Real- und Berufsschulen</li>
+              <li>die Erwachsenenbildung</li>
+              <li>den DaF-/DaZ-Unterricht, insbesondere Integrations- und Berufssprachkurse</li>
+              <li>Einrichtungen der Jugendarbeit</li>
+              <li>Familienstützpunkte</li>
+              <li>vergleichbare Bildungs- und Begegnungseinrichtungen</li>
+            </ul>
+            <p>Neben Lernenden richtet sich das Angebot auch an Multiplikatorinnen und Multiplikatoren, beispielsweise Lehrkräfte, pädagogische Fachkräfte, Sozialpädagoginnen und Sozialpädagogen sowie weitere Personen, die mit Kindern, Jugendlichen oder Erwachsenen arbeiten.</p>
+          </section>
+
+          <section class="section">
+            <h2>Weitere Informationen <span class="accent">(in Kürze)</span></h2>
+          </section>
+        </article>
+
+        <aside class="sidebar">
+          <div class="sidebar-card">
+            <h2>Demokratie braucht Übung.</h2>
+            <p>Wir entwickeln Bildungsformate, die Wissen, Reflexion und konkretes Handeln miteinander verbinden.</p>
           </div>
-        </div>
-        <div class="hero-visual reveal reveal-delay">
-          <div class="visual-image"></div>
-          <div class="visual-note"><span>01</span><strong>Haltung<br />entwickeln</strong><i>↗</i></div>
-          <div class="visual-caption">Komplexe Themen<br /><strong>klar besprechen.</strong></div>
-        </div>
-        <div class="scroll-hint"><span class="scroll-line"></span> Scrollen, um mehr zu erfahren</div>
-      </section>
-
-      <section id="angebot" class="offer section-pad">
-        <div class="section-heading reveal">
-          <p class="eyebrow"><span class="eyebrow-dot coral"></span> Was wir anbieten</p>
-          <h2>Wissen allein<br /><em>reicht nicht.</em></h2>
-        </div>
-        <div class="offer-intro reveal">
-          <p>Extremistische Inhalte und menschenfeindliche Narrative begegnen uns online und offline. Wir übersetzen Forschung und Erfahrung in Formate, die im Alltag tragen.</p>
-          <a class="text-link" href="#kontakt">Format besprechen <span>↗</span></a>
-        </div>
-        <div class="offer-grid">
-          <article class="offer-card reveal">
-            <span class="card-number">01 /</span>
-            <div class="card-icon">◌</div>
-            <h3>Workshops</h3>
-            <p>Interaktive Formate für Schulklassen, Jugendgruppen und pädagogische Teams.</p>
-            <a href="#kontakt" aria-label="Workshop anfragen">Mehr erfahren <span>↗</span></a>
-          </article>
-          <article class="offer-card offer-card-coral reveal reveal-delay-short">
-            <span class="card-number">02 /</span>
-            <div class="card-icon">✳</div>
-            <h3>Fortbildungen</h3>
-            <p>Handlungssicherheit für Fachkräfte im Umgang mit Radikalisierung und Ideologien.</p>
-            <a href="#kontakt" aria-label="Fortbildung anfragen">Mehr erfahren <span>↗</span></a>
-          </article>
-          <article class="offer-card offer-card-mint reveal reveal-delay">
-            <span class="card-number">03 /</span>
-            <div class="card-icon">↗</div>
-            <h3>Beratung</h3>
-            <p>Einordnen, reflektieren, nächste Schritte planen. Vertraulich und auf Augenhöhe.</p>
-            <a href="#kontakt" aria-label="Beratung anfragen">Mehr erfahren <span>↗</span></a>
-          </article>
-        </div>
-      </section>
-
-      <section id="ueber-uns" class="about section-pad">
-        <div class="about-image reveal"><div class="image-stamp">DIALOG<br /><span>statt</span><br />SCHUBLADEN</div></div>
-        <div class="about-copy reveal reveal-delay">
-          <p class="eyebrow"><span class="eyebrow-dot mint"></span> Zwei Perspektiven</p>
-          <h2>Wir fragen nach,<br /><em>bevor wir einordnen.</em></h2>
-          <p class="lead">Als Extremismus-Experten verbinden wir fachliche Präzision mit einem Gespür für die Realität in Schule, Jugendhilfe und Bildungsarbeit.</p>
-          <div class="people-list">
-            <div class="person"><span class="person-initial">ER</span><div><strong>Elenora Rachor</strong><small>Extremismusprävention &amp; politische Bildung</small></div><span class="person-arrow">↗</span></div>
-            <div class="person"><span class="person-initial dark">VS</span><div><strong>Volker Schwinghammer</strong><small>Analyse, Beratung &amp; Bildungsarbeit</small></div><span class="person-arrow">↗</span></div>
+          <div class="sidebar-nav">
+            <a href="#angebot">01 — Das Angebot</a>
+            <a href="#hintergrund">02 — Fachlicher Hintergrund</a>
+            <a href="#zielgruppen">03 — Zielgruppen</a>
           </div>
-        </div>
-      </section>
-
-      <section id="arbeitsweise" class="method section-pad">
-        <div class="method-header reveal"><p class="eyebrow"><span class="eyebrow-dot coral"></span> So arbeiten wir</p><h2>Vom <em>Erkennen</em><br />ins Handeln.</h2></div>
-        <div class="steps">
-          <div class="step reveal"><span>01</span><h3>Zuhören</h3><p>Wir starten bei Ihrer Situation, Ihren Fragen und den Menschen, die Sie erreichen möchten.</p></div>
-          <div class="step reveal reveal-delay-short"><span>02</span><h3>Einordnen</h3><p>Wir machen Muster, Begriffe und Zusammenhänge verständlich, ohne zu vereinfachen.</p></div>
-          <div class="step reveal reveal-delay"><span>03</span><h3>Stärken</h3><p>Gemeinsam entwickeln wir Haltung und konkrete nächste Schritte für Ihren Alltag.</p></div>
-        </div>
-      </section>
-
-      <section id="kontakt" class="contact section-pad">
-        <div class="contact-heading reveal"><p class="eyebrow"><span class="eyebrow-dot mint"></span> Zusammenarbeit</p><h2>Ein Thema?<br /><em>Lassen Sie uns sprechen.</em></h2><p>Erzählen Sie uns kurz, was Sie vorhaben. Wir melden uns zeitnah mit einem passenden Vorschlag.</p></div>
-        <form class="contact-form reveal reveal-delay" id="contact-form">
-          <label>Name / Organisation<input name="name" type="text" autocomplete="organization" placeholder="Wie dürfen wir Sie ansprechen?" required /></label>
-          <label>E-Mail-Adresse<input name="email" type="email" autocomplete="email" placeholder="ihre@email.de" required /></label>
-          <label>Worum geht es?<textarea name="message" rows="4" placeholder="Klasse, Team, Thema, Zeitraum ..." required></textarea></label>
-          <button class="button button-light" type="submit">Nachricht senden <span>↗</span></button>
-          <p class="form-status" role="status" aria-live="polite"></p>
-        </form>
-      </section>
+        </aside>
+      </div>
     </main>
 
-    <footer class="site-footer">
-      <a class="brand" href="#start"><span class="brand-mark">R<span>&amp;</span>S</span><span class="brand-name">Rachor <i>&amp;</i><br />Schwinghammer</span></a>
-      <p>Extremismus verstehen. Demokratie stärken.</p>
-      <div class="footer-links"><a href="#kontakt">Kontakt</a><a href="#start">Impressum</a><a href="#start">Datenschutz</a></div>
+    <footer class="footer">
+      <p class="footer-title">Demokratie stärken – Resilienz aufbauen</p>
+      <p>Eleonora Rachor &amp; Volker Schwinghammer</p>
     </footer>
-    <script src="script.js"></script>
   </body>
 </html>
