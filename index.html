@@ -3,8 +3,8 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Demokratie stärken – Resilienz gegen politischen Extremismus aufbauen. Ein Bildungsangebot von Eleonora Rachor und Volker Schwinghammer.">
-    <title>Demokratie stärken | Rachor &amp; Schwinghammer</title>
+    <meta name="description" content="Demokratie stärken – Resilienz gegen Extremismus. Ein phänomenübergreifendes Bildungsangebot von Eleonora Rachor und Volker Schwinghammer.">
+    <title>Demokratie stärken – Resilienz gegen Extremismus</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
@@ -56,6 +56,10 @@
       li::marker { color: var(--red); font-family: var(--display); font-weight: 700; }
       .background { background: white; border-left: 5px solid var(--green); margin: 30px 0 0; padding: 27px 30px; }
       .background p:last-child { margin-bottom: 0; }
+      .person-profile { align-items: start; display: grid; gap: 24px; grid-template-columns: 160px minmax(0, 1fr); margin-top: 30px; }
+      .person-profile img { aspect-ratio: 1; border-radius: 50%; object-fit: cover; width: 160px; }
+      .person-profile h3 { margin-top: 0; }
+      .person-profile p:last-child { margin-bottom: 0; }
       .audience-list { display: grid; gap: 0 30px; grid-template-columns: repeat(2, minmax(0, 1fr)); list-style: none; margin: 26px 0; padding: 0; }
       .audience-list li { border-bottom: 1px solid var(--line); margin: 0; padding: 13px 0 13px 22px; position: relative; }
       .audience-list li:before { background: var(--yellow); border-radius: 50%; content: ""; height: 8px; left: 0; position: absolute; top: 24px; width: 8px; }
@@ -83,6 +87,8 @@
         .hero:after { height: 250px; right: -130px; top: -100px; width: 250px; }
         .hero-rule { margin-top: 38px; }
         .background { padding: 22px; }
+        .person-profile { display: block; }
+        .person-profile img { margin-bottom: 12px; width: 120px; }
         .audience-list { display: block; }
         .footer { display: block; }
         .footer p + p { margin-top: 8px; }
@@ -96,79 +102,246 @@
       </a>
       <nav aria-label="Seitennavigation">
         <a href="#angebot">Angebot</a>
-        <a href="#hintergrund">Hintergrund</a>
-        <a href="#zielgruppen">Zielgruppen</a>
+        <a href="#module">Module</a>
+        <a href="#kontakt">Kontakt</a>
       </nav>
     </header>
 
     <main id="start">
       <section class="hero">
-        <p class="eyebrow">Bildungsangebot für Demokratie und Prävention</p>
-        <h1>Demokratie stärken –<span>Resilienz gegen politischen Extremismus aufbauen</span></h1>
+        <p class="eyebrow">Prävention durch Bildung</p>
+        <h1>Demokratie stärken –<span>Resilienz gegen Extremismus</span></h1>
+        <p class="hero-byline">Webseitentext und Projektbeschreibung</p>
         <p class="hero-byline">Eleonora Rachor &amp; Volker Schwinghammer</p>
         <div class="hero-rule" aria-hidden="true"></div>
       </section>
 
       <div class="layout">
         <article class="content">
-          <p class="intro">Extremistische Ideologien – ob religiös, rechts- oder linksextrem motiviert – gefährden demokratische Werte, gesellschaftlichen Zusammenhalt und ein respektvolles Miteinander. Bildungseinrichtungen kommt daher eine wichtige Rolle in der Demokratiebildung und Extremismusprävention zu <a href="https://www.bka.de/DE/Presse/Listenseite_Pressemitteilungen/2026/Presse2026/260609_PM_PMK2025.html" target="_blank" rel="noopener noreferrer">(ca. 86.000 politisch motivierte Straftaten in 2025)</a>.</p>
+          <p class="intro">Extremistische Ideologien – ob religiös begründet, rechts- oder linksextrem geprägt – können demokratische Werte, gesellschaftlichen Zusammenhalt und ein respektvolles Miteinander gefährden. Bildungseinrichtungen kommt daher eine wichtige Rolle in der Demokratiebildung und der Prävention extremistischer Einstellungen und Radikalisierungsprozesse zu.¹</p>
 
           <section id="angebot" class="section">
-            <h2>Genau hier setzt unser Angebot <span class="accent">„Demokratie stärken – Resilienz gegen Extremismus!“</span> an.</h2>
-            <p>Das Bildungsangebot befähigt Lernende sowie Multiplikatorinnen und Multiplikatoren dazu,</p>
+            <h2>Genau hier setzt unser Bildungsangebot <span class="accent">„Demokratie stärken – Resilienz gegen Extremismus“</span> an.</h2>
+            <p>Das Projekt verbindet Demokratiebildung und Extremismusprävention mit einem ressourcen- und handlungsorientierten Bildungsansatz. Ziel ist es, Lernende sowie Multiplikatorinnen und Multiplikatoren dabei zu unterstützen,</p>
             <ol>
-              <li>extremistische Narrative und Ideologien zu erkennen und kritisch zu hinterfragen,</li>
-              <li>demokratische Werte zu verstehen und einzuordnen, manipulative Strategien extremistischer Akteure und Gruppierungen zu durchschauen,</li>
-              <li>gesellschaftliche Zugehörigkeit und demokratische Teilhabe zu stärken sowie</li>
-              <li>individuelle Resilienz sowie Handlungssicherheit im Umgang mit extremistischen und demokratiefeindlichen Positionen aufzubauen.</li>
+              <li>extremistische Narrative und Ideologien zu erkennen, einzuordnen und kritisch zu hinterfragen,</li>
+              <li>demokratische Werte zu verstehen und zu reflektieren,</li>
+              <li>manipulative Strategien extremistischer Akteure und Gruppierungen zu durchschauen,</li>
+              <li>gesellschaftliche Zugehörigkeit und demokratische Teilhabe zu stärken,</li>
+              <li>verlässliche Informations-, Beratungs- und Unterstützungsmöglichkeiten kennenzulernen sowie</li>
+              <li>individuelle Resilienz und Handlungssicherheit im Umgang mit extremistischen und demokratiefeindlichen Positionen aufzubauen.</li>
             </ol>
           </section>
 
           <section id="hintergrund" class="section">
-            <h2>Entstehung und <span class="accent">fachlicher Hintergrund</span></h2>
+            <h2>Fachliche Grundlage und <span class="accent">Entstehung</span></h2>
             <div class="background">
-              <p>Die Grundlage des Projekts bildet die Masterarbeit von <strong>Eleonora Rachor (Diplom-Germanistin und M.A. Fremdsprachenlinguistin)</strong>, mit dem Titel <em>„Frühzeitig vorbeugen: Erstellung und experimentelle Durchführung eines Unterrichtsmoduls in den Integrationskursen zur Prävention von salafistischer Radikalisierung“</em>.</p>
-              <p>Im Rahmen dieser Arbeit entwickelte sie ein modular aufgebautes und flexibel einsetzbares Curriculum sowie ein Lehrerhandbuch mit dazugehörigen Arbeitsmaterialien. Die Arbeit entstand während ihrer Tätigkeit als wissenschaftliche Hilfskraft in einem Projekt im Rahmen des <strong>Bundesprogramms „Demokratie leben!“</strong></p>
-              <p>Gemeinsam mit <strong>Volker Schwinghammer (Dipl. Sozialarbeiter, Trauma- und integrativer Lerntherapeut)</strong> wurde das ursprüngliche Konzept weiterentwickelt, um zusätzliche Erscheinungsformen des Extremismus und aktuelle gesellschaftliche Herausforderungen ergänzt und für unterschiedliche Bildungsbereiche und Zielgruppen aufbereitet.</p>
+              <p>Die fachliche Grundlage des Projekts bildet die Masterarbeit von <strong>Eleonora Rachor (geb. Josifovska)</strong> mit dem Titel <em>„Frühzeitig vorbeugen: Erstellung und experimentelle Durchführung eines Unterrichtsmoduls in den Integrationskursen zur Prävention von salafistischer Radikalisierung“</em>.</p>
+              <p>Im Rahmen dieser Arbeit entwickelte Eleonora Rachor, Diplom-Germanistin und M.A. Fremdsprachenlinguistin, ein modular aufgebautes Unterrichtskonzept sowie das Lehrerhandbuch <em>„Resilienz gegen Extremismus“</em> inklusive Arbeitsmaterialien.</p>
+              <p>Ausgangspunkt waren Erfahrungen aus der Unterrichtspraxis sowie die Frage, wie Lehrende mit problematischen und möglicherweise radikalen Einstellungen und Äußerungen umgehen können und wie Lernende gleichzeitig präventiv gestärkt werden können.</p>
+              <p>Das ursprüngliche Lehrerhandbuch umfasste fünf Unterrichtseinheiten mit einem zeitlichen Rahmen von insgesamt sieben bis zehn Unterrichtsstunden und war insbesondere für den DaF-/DaZ-Bereich sowie für Politische Bildung, Ethik/Religion und Gesellschaftslehre konzipiert.²</p>
+              <p>Das Unterrichtsmodul wurde im Rahmen der Masterarbeit in einem Integrationskurs explorativ erprobt und wissenschaftlich begleitet. Dabei kamen sowohl qualitative als auch quantitative Methoden zum Einsatz.</p>
+              <p>Auf dieser Grundlage wurde das Konzept weiterentwickelt. Gemeinsam mit dem Sozialarbeiter und Lerntherapeuten Volker Schwinghammer wird der ursprüngliche Ansatz heute fachlich und didaktisch erweitert, auf weitere Alters- und Zielgruppen übertragen und um zusätzliche Erscheinungsformen des Extremismus sowie aktuelle gesellschaftliche Herausforderungen ergänzt.</p>
+              <p>Aus dem ursprünglich auf die Prävention salafistischer Radikalisierung im Kontext von Integrationskursen ausgerichteten Unterrichtskonzept entsteht damit das heutige, phänomenübergreifende Bildungsangebot „Demokratie stärken – Resilienz gegen Extremismus“.</p>
             </div>
+          </section>
+
+          <section id="module" class="section">
+            <h2>Unser Ansatz: fünf miteinander <span class="accent">verbundene Module</span></h2>
+            <p>Das heutige Konzept baut auf den zentralen Ebenen des ursprünglichen Curriculums und seiner Weiterentwicklung auf. Diese werden für das Projekt „Demokratie stärken – Resilienz gegen Extremismus“ als fünf miteinander verbundene Module weitergeführt.</p>
+            <p>Je nach Zielgruppe, Alter, Sprachniveau, pädagogischem Kontext und gewünschtem Schwerpunkt können die Module einzeln eingesetzt oder miteinander kombiniert werden.</p>
+            <h3>Modul 1 – WISSEN<br><small>Erkennen · Verstehen · Einordnen</small></h3>
+            <p>Wissen bildet eine wichtige Grundlage, um extremistische und demokratiefeindliche Positionen erkennen und kritisch einordnen zu können. Das Modul vermittelt – alters- und zielgruppengerecht – Grundlagen zu Demokratie, Extremismus, Radikalisierung und unterschiedlichen ideologischen Erscheinungsformen.</p>
+            <ul class="audience-list">
+              <li>Demokratie und demokratische Grundwerte</li>
+              <li>Extremismus und Radikalisierung</li>
+              <li>religiös begründeter Extremismus und Islamismus</li>
+              <li>Rechtsextremismus und Linksextremismus</li>
+              <li>Verschwörungsideologien und Desinformation</li>
+              <li>extremistische Narrative und Feindbilder</li>
+              <li>manipulative Strategien extremistischer Akteure und Gruppierungen</li>
+              <li>aktuelle beziehungsweise ideologisch schwer einzuordnende Gewaltphänomene</li>
+            </ul>
+            <p>Ziel ist nicht allein die Vermittlung von Begriffswissen. Lernende sollen vielmehr darin unterstützt werden, Informationen zu prüfen, Zusammenhänge zu verstehen und unterschiedliche Positionen differenziert einzuordnen.</p>
+            <h3>Modul 2 – ANERKENNUNG<br><small>Identität · Perspektivwechsel · respektvolles Miteinander</small></h3>
+            <p>Bereits das ursprüngliche Curriculum berücksichtigte Anerkennung als einen wichtigen Bestandteil präventiver Bildungsarbeit. Im heutigen Konzept wird dieser Ansatz erweitert. Im Mittelpunkt stehen Fragen nach Identität, Zugehörigkeit, Wertschätzung, unterschiedlichen Lebenswelten und einem respektvollen Umgang miteinander.</p>
+            <ul class="audience-list">
+              <li>Was bedeutet Zugehörigkeit?</li>
+              <li>Welche unterschiedlichen Identitäten und Lebensentwürfe gibt es?</li>
+              <li>Wie entstehen Vorurteile und Feindbilder?</li>
+              <li>Wie können unterschiedliche religiöse, kulturelle oder gesellschaftliche Perspektiven respektvoll miteinander diskutiert werden?</li>
+              <li>Wie kann ein konstruktiver Umgang mit unterschiedlichen Meinungen gelingen?</li>
+            </ul>
+            <p>Das Modul schafft Räume für Perspektivwechsel und Reflexion, ohne kontroverse gesellschaftliche oder politische Positionen auszublenden.</p>
+            <h3>Modul 3 – ZUGANG ZU INFORMATIONEN UND UNTERSTÜTZUNG<br><small>Informieren · Orientieren · Hilfe finden</small></h3>
+            <p>Ein weiterer Grundgedanke des ursprünglichen Lehrerhandbuchs war der handlungsrelevante Zugang zu Informationen. Lernende und Multiplikatorinnen und Multiplikatoren sollen wissen, wo sie verlässliche Informationen erhalten und an wen sie sich wenden können, wenn sie mit problematischen Entwicklungen, Krisensituationen oder möglichen Radikalisierungsprozessen konfrontiert werden.</p>
+            <ul class="audience-list">
+              <li>Wie verlässliche von problematischen Informationsquellen unterschieden werden können</li>
+              <li>Welche Beratungs- und Unterstützungsangebote existieren</li>
+              <li>Wo bei Fragen zu Extremismus und Radikalisierung fachliche Beratung zu finden ist</li>
+              <li>Welche Handlungsmöglichkeiten bei Unsicherheit bestehen</li>
+              <li>Wann professionelle Unterstützung sinnvoll sein kann</li>
+            </ul>
+            <p>Damit soll aus abstraktem Wissen konkretes Orientierungs- und Handlungswissen entstehen.</p>
+            <h3>Modul 4 – RESILIENZ<br><small>Ressourcen · Zugehörigkeit · Perspektiven stärken</small></h3>
+            <p>Der Begriff Resilienz ist seit der Entwicklung des ursprünglichen Lehrerhandbuchs ein zentraler Bestandteil des Konzepts. Bereits dort wurde Resilienz als Stärkung von Ressourcen, Kompetenzen, Perspektiven und gesellschaftlichem Zugehörigkeitsgefühl verstanden. Daran knüpft das heutige Projekt an.</p>
+            <ul class="audience-list">
+              <li>eigene Stärken und Ressourcen wahrnehmen</li>
+              <li>Selbstwirksamkeit erfahren</li>
+              <li>gesellschaftliche Zugehörigkeit reflektieren und stärken</li>
+              <li>demokratische Beteiligungsmöglichkeiten kennenlernen</li>
+              <li>positive Zukunftsperspektiven entwickeln</li>
+              <li>unterschiedliche Perspektiven aushalten und reflektieren</li>
+              <li>konstruktive Handlungsmöglichkeiten entwickeln</li>
+            </ul>
+            <p>Resilienz gegen Extremismus bedeutet in unserem Bildungsansatz nicht, Menschen gegenüber bestimmten Meinungen „unempfindlich“ zu machen. Vielmehr geht es darum, persönliche und soziale Ressourcen zu stärken, die einen reflektierten und handlungssicheren Umgang mit extremistischen und demokratiefeindlichen Narrativen unterstützen können.</p>
+            <h3>Modul 5 – ANWENDEN UND BEURTEILEN<br><small>Reflektieren · Entscheiden · Handeln</small></h3>
+            <p>Wissen allein führt noch nicht automatisch zu Handlungssicherheit. Deshalb bildet die Anwendung des Gelernten einen weiteren zentralen Bestandteil des Konzepts. In diesem Modul werden die Inhalte der vorherigen Module auf konkrete, möglichst lebensnahe Situationen übertragen.</p>
+            <ul class="audience-list">
+              <li>Aussagen und Situationen kritisch beurteilen</li>
+              <li>zwischen kontroversen, radikalen, extremistischen und demokratiefeindlichen Positionen differenzieren</li>
+              <li>manipulative Narrative erkennen</li>
+              <li>unterschiedliche Handlungsmöglichkeiten abwägen</li>
+              <li>angemessene Reaktionen auf problematische Äußerungen entwickeln</li>
+              <li>Informationen und Unterstützungsangebote situationsgerecht nutzen</li>
+              <li>eigene Entscheidungen begründen und reflektieren</li>
+            </ul>
+            <p>Damit verbindet das fünfte Modul Wissen, Reflexion, Resilienz und konkretes Handeln.</p>
+          </section>
+
+          <section class="section">
+            <h2>Flexibler und <span class="accent">phänomenübergreifender Aufbau</span></h2>
+            <p>Das Konzept verfolgt einen phänomenübergreifenden Ansatz und nimmt unterschiedliche Formen extremistischer und demokratiefeindlicher Einstellungen sowie mögliche Wechselwirkungen zwischen diesen in den Blick.³</p>
+            <p>Die fünf Module bilden dabei einen gemeinsamen didaktischen Rahmen. Ihre konkrete Ausgestaltung ist jedoch nicht starr. Abhängig von Alter, Sprachniveau, Zielgruppe, institutionellem Kontext und gewünschtem Schwerpunkt können Inhalte ausgewählt, angepasst und miteinander kombiniert werden.</p>
+            <p>Aktuelle gesellschaftspolitische Entwicklungen und neu auftretende Phänomene können bedarfsgerecht einbezogen werden. Dazu können auch Gewaltphänomene gehören, die sich nicht eindeutig etablierten extremistischen Ideologien oder Phänomenbereichen zuordnen lassen.</p>
           </section>
 
           <section id="zielgruppen" class="section">
             <h2>Die <span class="accent">Zielgruppen</span></h2>
-            <p>Das Bildungsangebot richtet sich an unterschiedliche Alters- und Zielgruppen in staatlichen und gemeinnützigen Bildungseinrichtungen. Ein Einsatz ist – entsprechend dem jeweiligen Entwicklungsstand und mit altersgerechter methodisch-didaktischer Anpassung – bereits ab der 4. Jahrgangsstufe der Grundschule möglich.</p>
-            <p>Darüber hinaus eignet sich das Konzept unter anderem für</p>
+            <p>Das Bildungsangebot richtet sich an unterschiedliche Alters- und Zielgruppen in staatlichen und gemeinnützigen Bildungseinrichtungen.</p>
+            <p>Je nach Thema, Zielsetzung und Entwicklungsstand können ausgewählte und entsprechend altersgerecht aufbereitete Module bereits ab der 4. Jahrgangsstufe eingesetzt werden. Diese Erweiterung gehört zur Weiterentwicklung des Projekts ab 2026; das ursprüngliche Lehrerhandbuch von 2018 war für Teilnehmende ab 14 Jahren konzipiert.</p>
             <ul class="audience-list">
               <li>Mittel-, Real- und Berufsschulen</li>
+              <li>weitere schulische Bildungsbereiche</li>
               <li>die Erwachsenenbildung</li>
               <li>den DaF-/DaZ-Unterricht, insbesondere Integrations- und Berufssprachkurse</li>
               <li>Einrichtungen der Jugendarbeit</li>
-              <li>Familienstützpunkte</li>
+              <li>Familienstützpunkte sowie</li>
               <li>vergleichbare Bildungs- und Begegnungseinrichtungen</li>
             </ul>
-            <p>Neben Lernenden richtet sich das Angebot auch an Multiplikatorinnen und Multiplikatoren, beispielsweise Lehrkräfte, pädagogische Fachkräfte, Sozialpädagoginnen und Sozialpädagogen sowie weitere Personen, die mit Kindern, Jugendlichen oder Erwachsenen arbeiten.</p>
+            <p>Neben Lernenden richtet sich das Angebot ausdrücklich an Multiplikatorinnen und Multiplikatoren, beispielsweise Lehrkräfte, pädagogische Fachkräfte, Sozialpädagoginnen und Sozialpädagogen sowie weitere Personen, die mit Kindern, Jugendlichen oder Erwachsenen arbeiten.</p>
           </section>
 
           <section class="section">
-            <h2>Weitere Informationen <span class="accent">(in Kürze)</span></h2>
+            <h2>Unsere <span class="accent">Formate</span></h2>
+            <h3>Unterrichtsmodule und Workshops</h3>
+            <p>Für Schülerinnen und Schüler, Jugendliche und erwachsene Lernende können einzelne Module oder miteinander kombinierte Workshops angeboten werden. Inhalte, Methoden und sprachliche Anforderungen werden an die jeweilige Gruppe angepasst.</p>
+            <h3>Fortbildungen und Workshops für Multiplikatorinnen und Multiplikatoren</h3>
+            <p>Lehrkräfte und andere pädagogische Fachkräfte können mit den fachlichen Grundlagen, Materialien und Methoden des Konzepts vertraut gemacht werden. Dabei geht es insbesondere darum, Handlungssicherheit zu fördern und Möglichkeiten aufzuzeigen, wie ausgewählte Inhalte und Methoden in der eigenen pädagogischen Praxis eingesetzt werden können.</p>
+            <h3>Vorträge und Informationsveranstaltungen</h3>
+            <p>Für Eltern, pädagogische Fachkräfte, Bildungseinrichtungen und weitere interessierte Gruppen können außerdem Vorträge und Informationsveranstaltungen angeboten werden. Themen, Umfang und Schwerpunkt werden entsprechend dem jeweiligen Bedarf abgestimmt.</p>
+          </section>
+
+          <section class="section">
+            <h2>Durchführung und <span class="accent">Multiplikatorenansatz</span></h2>
+            <p>Eleonora Rachor und Volker Schwinghammer führen die Bildungsangebote, Unterrichtsmodule, Workshops, Fortbildungen und Veranstaltungen auf Anfrage selbst durch.</p>
+            <p>Darüber hinaus können interessierte Multiplikatorinnen und Multiplikatoren mit den Materialien, Inhalten und Methoden vertraut gemacht werden, um ausgewählte Module anschließend in ihrer eigenen pädagogischen Praxis einzusetzen.</p>
+            <p>Auf diese Weise verbindet das heutige Projekt die direkte Bildungsarbeit mit Lernenden mit der Qualifizierung pädagogischer Fachkräfte.</p>
+            <p>Dieser Multiplikatorenansatz knüpft an die frühere Weiterentwicklung des Curriculums an, in der bereits Fortbildungsreihen zur Befähigung von Lehrenden sowie eine fachliche Begleitung der Umsetzung vorgesehen waren.</p>
+          </section>
+
+          <section class="section">
+            <h2>Von der Anfrage zum passenden <span class="accent">Bildungsangebot</span></h2>
+            <ol>
+              <li><strong>Kontaktaufnahme</strong> – Sie schildern uns Ihre Einrichtung, Ihre Zielgruppe und Ihren Bedarf.</li>
+              <li><strong>Gemeinsame Abstimmung</strong> – Wir klären gemeinsam Zielsetzung, gewünschte Themen, zeitlichen Umfang und organisatorische Rahmenbedingungen.</li>
+              <li><strong>Auswahl der Module</strong> – Aus den fünf Modulen werden passende Inhalte und Schwerpunkte ausgewählt und miteinander kombiniert.</li>
+              <li><strong>Zielgruppengerechte Anpassung</strong> – Methoden, Materialien und sprachliche Anforderungen werden an Alter, Sprachniveau, Vorkenntnisse und institutionellen Kontext angepasst.</li>
+              <li><strong>Durchführung</strong> – Das abgestimmte Bildungsangebot wird von uns durchgeführt.</li>
+            </ol>
+          </section>
+
+          <section class="section">
+            <h2>Über <span class="accent">uns</span></h2>
+            <div class="person-profile">
+              <img src="images/Eli.jpg" alt="Eleonora Rachor">
+              <div>
+                <h3>Eleonora Rachor</h3>
+                <p><strong>Diplom-Germanistin | M.A. Fremdsprachenlinguistik</strong></p>
+                <p>Eleonora Rachor ist Projektentwicklerin im Bereich Demokratiebildung sowie Radikalisierungs- und Extremismusprävention. Die fachliche Grundlage des heutigen Projekts geht auf ihre Masterarbeit und das von ihr entwickelte Lehrerhandbuch „Resilienz gegen Extremismus“ inklusive Arbeitsmaterialien zurück. Die ursprüngliche Konzeption entstand im Kontext ihrer wissenschaftlichen und praktischen Beschäftigung mit Radikalisierungsprävention und Bildungsarbeit und wurde im Rahmen ihrer Masterarbeit explorativ erprobt und wissenschaftlich untersucht.</p>
+              </div>
+            </div>
+            <div class="person-profile">
+              <img src="images/Volker.png" alt="Volker Schwinghammer">
+              <div>
+                <h3>Volker Schwinghammer</h3>
+                <p><strong>Sozialarbeiter | Lerntherapeut</strong></p>
+                <p>Volker Schwinghammer ist Projektentwickler im Bereich Demokratiebildung sowie Radikalisierungs- und Extremismusprävention. Er bringt insbesondere seine sozialarbeiterische, pädagogische und lerntherapeutische Perspektive in die Weiterentwicklung und Durchführung des heutigen Bildungsangebots ein.</p>
+              </div>
+            </div>
+          </section>
+
+          <section class="section">
+            <h2><span class="accent">Projektstart</span></h2>
+            <p>Das weiterentwickelte Projekt „Demokratie stärken – Resilienz gegen Extremismus“ startet im Schulhalbjahr 2026/27.</p>
+            <p>Unterrichtsmodule, Workshops, Fortbildungen, Vorträge und Informationsveranstaltungen können auf Anfrage individuell an die jeweilige Bildungseinrichtung, Zielgruppe, Altersstufe, Zielsetzung und das vorhandene Sprachniveau angepasst werden.</p>
+          </section>
+
+          <section class="section">
+            <h2>Häufige <span class="accent">Fragen</span></h2>
+            <h3>Müssen immer alle fünf Module durchgeführt werden?</h3>
+            <p>Nein. Das Konzept ist modular aufgebaut. Abhängig von Zielgruppe, Zeitrahmen und Zielsetzung können einzelne Module ausgewählt oder mehrere Module miteinander kombiniert werden.</p>
+            <h3>Für welche Altersgruppen ist das Angebot geeignet?</h3>
+            <p>Je nach Thema und Zielsetzung können ausgewählte, altersgerecht aufbereitete Module bereits ab der 4. Jahrgangsstufe eingesetzt werden. Darüber hinaus richten sich die Angebote an Jugendliche, Erwachsene und pädagogische Multiplikatorinnen und Multiplikatoren.</p>
+            <h3>Wie lange dauert ein Bildungsangebot?</h3>
+            <p>Dauer und Umfang richten sich nach Zielgruppe, ausgewählten Modulen und Zielsetzung. Möglich sind einzelne Unterrichtseinheiten beziehungsweise Workshops ebenso wie umfangreichere oder mehrteilige Formate.</p>
+            <h3>Sind die Angebote auch für Integrations- und Berufssprachkurse geeignet?</h3>
+            <p>Ja. Das ursprüngliche Konzept wurde für den Kontext von Integrationskursen entwickelt. Die Inhalte können entsprechend dem vorhandenen Sprachniveau angepasst werden.</p>
+            <h3>Werden die Inhalte individuell angepasst?</h3>
+            <p>Ja. Alter, Sprachniveau, Vorkenntnisse, institutioneller Kontext, gewünschte Themen und Zielsetzung werden bei der Planung berücksichtigt.</p>
+            <h3>Bieten Sie Fortbildungen für Lehrkräfte und pädagogische Fachkräfte an?</h3>
+            <p>Ja. Der Multiplikatorenansatz ist ein wesentlicher Bestandteil des Projekts. Neben Angeboten für Lernende können Workshops und Fortbildungen für pädagogische Fachkräfte durchgeführt werden.</p>
+            <h3>Was kostet ein Workshop oder eine Fortbildung?</h3>
+            <p>Die Kosten richten sich nach Format, Umfang, Dauer, Vorbereitungsaufwand und organisatorischen Rahmenbedingungen. Nach einer ersten Abstimmung kann ein individuelles Angebot erstellt werden.</p>
+          </section>
+
+          <section id="kontakt" class="section">
+            <h2>Kontakt und <span class="accent">weitere Informationen</span></h2>
+            <p>Sie interessieren sich für einen Workshop, ein Unterrichtsmodul, eine Fortbildung, einen Vortrag oder eine Informationsveranstaltung?</p>
+            <p>Wir entwickeln gemeinsam mit Ihnen ein Bildungsangebot, das zu Ihrer Einrichtung, Ihrer Zielgruppe und Ihrer Fragestellung passt.</p>
+            <div class="background">
+              <p><strong>Gemeinsamer Projektkontakt</strong><br>Demokratie stärken – Resilienz gegen Extremismus<br>E-Mail: <a href="mailto:info.demokratie.staerken@gmail.com">info.demokratie.staerken@gmail.com</a></p>
+              <p><strong>Ihre Ansprechpartner</strong></p>
+              <p><strong>Eleonora Rachor</strong> – Diplom-Germanistin | M.A. Fremdsprachenlinguistik<br>Projektentwicklerin im Bereich Demokratiebildung und Radikalisierungs- und Extremismusprävention<br>Web: <a href="https://www.eleonora-rachor.com" target="_blank" rel="noopener noreferrer">www.eleonora-rachor.com</a></p>
+              <p><strong>Volker Schwinghammer</strong> – Sozialarbeiter | Lerntherapeut<br>Projektentwickler im Bereich Demokratiebildung und Radikalisierungs- und Extremismusprävention<br>Web: <a href="https://lerntherapie-schwinghammer.de" target="_blank" rel="noopener noreferrer">lerntherapie-schwinghammer.de</a></p>
+            </div>
+          </section>
+
+          <section class="section">
+            <h2><span class="accent">Quellenhinweise</span></h2>
+            <p>¹ Vgl. Kultusministerkonferenz (KMK): Demokratiebildung; Michael Kiefer: <em>Radikalisierungsprävention in der Schule – Voraussetzungen und Handlungsfelder im Bereich Islamismus</em>, Bundeszentrale für politische Bildung (bpb), 2022.</p>
+            <p>² Vgl. Josifovska, Eleonora (2018): <em>Resilienz gegen Extremismus. Lehrerhandbuch inkl. Arbeitsmaterialien.</em> Das ursprüngliche Konzept war für DaF-/DaZ-Kurse sowie Politische Bildung, Ethik/Religion und Gesellschaftslehre vorgesehen, ab 14 Jahren bzw. Sprachniveau A2, mit fünf Unterrichtseinheiten und einem Umfang von sieben bis zehn Unterrichtsstunden.</p>
+            <p>³ Vgl. Freiheit, Manuela / Uhl, Andreas / Zick, Andreas (2022): <em>Phänomenübergreifende Radikalisierungsprävention. Erkenntnisse aus dem Forschungsprojekt MAPEX</em>, Bundeszentrale für politische Bildung (bpb).</p>
           </section>
         </article>
 
         <aside class="sidebar">
           <div class="sidebar-card">
-            <h2>Demokratie braucht Übung.</h2>
-            <p>Wir entwickeln Bildungsformate, die Wissen, Reflexion und konkretes Handeln miteinander verbinden.</p>
+            <h2>Demokratie stärken – Resilienz gegen Extremismus</h2>
+            <p>Eleonora Rachor &amp; Volker Schwinghammer</p>
           </div>
           <div class="sidebar-nav">
             <a href="#angebot">01 — Das Angebot</a>
-            <a href="#hintergrund">02 — Fachlicher Hintergrund</a>
+            <a href="#module">02 — Fünf Module</a>
             <a href="#zielgruppen">03 — Zielgruppen</a>
+            <a href="#kontakt">04 — Kontakt</a>
           </div>
         </aside>
       </div>
     </main>
 
     <footer class="footer">
-      <p class="footer-title">Demokratie stärken – Resilienz aufbauen</p>
+      <p class="footer-title">Demokratie stärken – Resilienz gegen Extremismus</p>
       <p>Eleonora Rachor &amp; Volker Schwinghammer</p>
     </footer>
   </body>
