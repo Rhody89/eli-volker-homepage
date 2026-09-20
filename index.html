@@ -35,6 +35,9 @@
       nav a:hover { color: var(--red); }
       .hero { background: white; border-bottom: 1px solid var(--line); overflow: hidden; padding: clamp(62px, 9vw, 130px) clamp(22px, 11vw, 170px) clamp(70px, 9vw, 130px); position: relative; }
       .hero:after { background: linear-gradient(135deg, var(--yellow) 0 25%, var(--green) 25% 50%, var(--blue) 50% 75%, var(--red) 75%); border-radius: 50%; content: ""; height: 420px; opacity: .11; position: absolute; right: -120px; top: -170px; width: 420px; }
+      .hero-content { margin: 0 auto; max-width: 1250px; position: relative; z-index: 1; }
+      .hero-image { display: block; height: auto; margin: 30px 0 0; max-width: 760px; object-fit: contain; width: 100%; }
+      .approach-image { display: block; height: auto; margin: 0 0 30px; max-width: 100%; width: 760px; }
       .eyebrow { color: var(--red); font-size: 12px; font-weight: 700; letter-spacing: .12em; margin: 0 0 22px; text-transform: uppercase; }
       h1, h2, h3 { font-family: var(--display); line-height: 1.08; }
       h1 { color: var(--navy); font-size: clamp(42px, 7vw, 86px); letter-spacing: -.06em; margin: 0; max-width: 1000px; }
@@ -109,11 +112,15 @@
 
     <main id="start">
       <section class="hero">
-        <p class="eyebrow">Prävention durch Bildung</p>
-        <h1>Demokratie stärken –<span>Resilienz gegen Extremismus</span></h1>
-        <p class="hero-byline">Webseitentext und Projektbeschreibung</p>
-        <p class="hero-byline">Eleonora Rachor &amp; Volker Schwinghammer</p>
-        <div class="hero-rule" aria-hidden="true"></div>
+        <div class="hero-content">
+          <div>
+            <p class="eyebrow">Prävention durch Bildung</p>
+            <h1>Demokratie stärken –<span>Resilienz gegen Extremismus</span></h1>
+            <img class="hero-image" src="images/volker_eli_praesentation.png" alt="Eleonora Rachor und Volker Schwinghammer bei einer Präsentation">
+            <p class="hero-byline">Eleonora Rachor &amp; Volker Schwinghammer</p>
+            <div class="hero-rule" aria-hidden="true"></div>
+          </div>
+        </div>
       </section>
 
       <div class="layout">
@@ -148,6 +155,7 @@
 
           <section id="module" class="section">
             <h2>Unser Ansatz: fünf miteinander <span class="accent">verbundene Module</span></h2>
+            <img class="approach-image" src="images/unser_ansatz.png" alt="Unser Ansatz mit fünf miteinander verbundenen Modulen">
             <p>Das heutige Konzept baut auf den zentralen Ebenen des ursprünglichen Curriculums und seiner Weiterentwicklung auf. Diese werden für das Projekt „Demokratie stärken – Resilienz gegen Extremismus“ als fünf miteinander verbundene Module weitergeführt.</p>
             <p>Je nach Zielgruppe, Alter, Sprachniveau, pädagogischem Kontext und gewünschtem Schwerpunkt können die Module einzeln eingesetzt oder miteinander kombiniert werden.</p>
             <h3>Modul 1 – WISSEN<br><small>Erkennen · Verstehen · Einordnen</small></h3>
