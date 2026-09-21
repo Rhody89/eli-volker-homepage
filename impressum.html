@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Impressum für Demokratie stärken – Resilienz gegen Extremismus.">
+    <title>Impressum – Demokratie stärken</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+    <style>
+      :root {
+        --navy: #10265f;
+        --blue: #1474b9;
+        --green: #31a643;
+        --yellow: #f7ce18;
+        --red: #e5231c;
+        --ink: #1b2430;
+        --muted: #5d6877;
+        --paper: #f7f9fc;
+        --line: #dfe5ed;
+        --sans: "DM Sans", sans-serif;
+        --display: "Space Grotesk", sans-serif;
+      }
+
+      * { box-sizing: border-box; }
+      body { margin: 0; background: var(--paper); color: var(--ink); font-family: var(--sans); line-height: 1.7; }
+      a { color: inherit; }
+      .site-header { align-items: center; background: rgba(247, 249, 252, .94); border-bottom: 1px solid var(--line); display: flex; justify-content: space-between; padding: 18px clamp(22px, 6vw, 96px); position: sticky; top: 0; z-index: 10; }
+      .logo { display: block; width: 500px; }
+      .logo img { display: block; height: auto; width: 100%; }
+      nav { display: flex; gap: clamp(18px, 3vw, 42px); }
+      nav a { color: var(--navy); font-size: 17px; font-weight: 700; text-decoration: none; }
+      nav a:hover { color: var(--red); }
+      .hero { background: white; border-bottom: 1px solid var(--line); overflow: hidden; padding: clamp(62px, 9vw, 130px) clamp(22px, 11vw, 170px) clamp(70px, 9vw, 130px); position: relative; }
+      .hero:after { background: linear-gradient(135deg, var(--yellow) 0 25%, var(--green) 25% 50%, var(--blue) 50% 75%, var(--red) 75%); border-radius: 50%; content: ""; height: 420px; opacity: .11; position: absolute; right: -120px; top: -170px; width: 420px; }
+      .hero-content { margin: 0 auto; max-width: 1250px; position: relative; z-index: 1; }
+      .eyebrow { color: var(--red); font-size: 12px; font-weight: 700; letter-spacing: .12em; margin: 0 0 22px; text-transform: uppercase; }
+      h1, h2, h3 { font-family: var(--display); line-height: 1.08; }
+      h1 { color: var(--navy); font-size: clamp(42px, 7vw, 86px); letter-spacing: -.06em; margin: 0; max-width: 1000px; }
+      h1 span { color: var(--green); display: block; }
+      .hero-rule { background: linear-gradient(90deg, var(--navy), var(--blue), var(--green), var(--yellow), var(--red)); height: 5px; margin-top: 55px; max-width: 600px; width: 100%; }
+      .layout { display: grid; gap: clamp(40px, 7vw, 110px); grid-template-columns: minmax(0, 1fr) 275px; margin: 0 auto; max-width: 1250px; padding: clamp(62px, 8vw, 112px) clamp(22px, 5vw, 70px); }
+      .content { min-width: 0; }
+      .content p { margin: 0 0 24px; }
+      .content a { color: var(--blue); font-weight: 700; }
+      .content a:hover { color: var(--red); }
+      .section { border-top: 1px solid var(--line); margin-top: 58px; padding-top: 43px; }
+      .section:first-child { border-top: 0; margin-top: 0; padding-top: 0; }
+      h2 { color: var(--navy); font-size: clamp(27px, 3.3vw, 43px); letter-spacing: -.045em; margin: 0 0 25px; }
+      h2 .accent { color: var(--red); }
+      h3 { color: var(--navy); font-size: 20px; margin: 36px 0 14px; }
+      address { font-style: normal; }
+      .notice { background: white; border-left: 5px solid var(--yellow); margin: 30px 0 0; padding: 27px 30px; }
+      .notice p:last-child { margin-bottom: 0; }
+      .sidebar { align-self: start; position: sticky; top: 105px; }
+      .sidebar-card { background: var(--navy); color: white; overflow: hidden; padding: 30px; position: relative; }
+      .sidebar-card:before { background: linear-gradient(90deg, var(--blue), var(--green), var(--yellow), var(--red)); content: ""; height: 7px; left: 0; position: absolute; right: 0; top: 0; }
+      .sidebar-card h2 { color: white; font-size: 25px; margin-top: 8px; }
+      .sidebar-card p { color: rgba(255,255,255,.76); font-size: 14px; }
+      .sidebar-nav { border-left: 1px solid var(--line); display: flex; flex-direction: column; gap: 11px; margin-top: 30px; padding-left: 18px; }
+      .sidebar-nav a { color: var(--muted); font-size: 13px; text-decoration: none; }
+      .sidebar-nav a:hover { color: var(--navy); }
+      .footer { background: var(--navy); color: white; display: flex; gap: 30px; justify-content: space-between; padding: 34px clamp(22px, 6vw, 96px); }
+      .footer p { font-size: 12px; margin: 0; opacity: .74; }
+      .footer .footer-title { color: white; font-family: var(--display); font-size: 17px; font-weight: 600; opacity: 1; }
+      .footer a { color: white; font-size: 12px; font-weight: 700; }
+      @media (max-width: 800px) {
+        .site-header { padding: 14px 22px; }
+        .logo { width: 300px; }
+        nav { gap: 16px; }
+        nav a { font-size: 14px; }
+        .layout { display: block; }
+        .sidebar { margin-top: 50px; position: static; }
+      }
+      @media (max-width: 560px) {
+        nav a:not(:last-child) { display: none; }
+        .hero:after { height: 250px; right: -130px; top: -100px; width: 250px; }
+        .hero-rule { margin-top: 38px; }
+        .notice { padding: 22px; }
+        .footer { display: block; }
+        .footer p + p { margin-top: 8px; }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="logo" href="index.html" aria-label="Demokratie stärken Startseite">
+        <img src="images/Logo.png" alt="Demokratie stärken – Resilienz gegen Extremismus">
+      </a>
+      <nav aria-label="Seitennavigation">
+        <a href="index.html">Startseite</a>
+        <a href="index.html#kontakt">Kontakt</a>
+      </nav>
+    </header>
+
+    <main id="start">
+      <section class="hero">
+        <div class="hero-content">
+          <p class="eyebrow">Rechtliche Informationen</p>
+          <h1>Impressum<span>Demokratie stärken</span></h1>
+          <div class="hero-rule" aria-hidden="true"></div>
+        </div>
+      </section>
+
+      <div class="layout">
+        <article class="content">
+          <section class="section">
+            <h2>Anbieter und <span class="accent">Kontakt</span></h2>
+            <p>Angaben gemäß § 5 Digitale-Dienste-Gesetz (DDG):</p>
+            <address class="notice">
+              <p><strong>Demokratie stärken – Resilienz gegen Extremismus</strong><br>
+              Ein gemeinsames Bildungsangebot von Eleonora Rachor und Volker Schwinghammer</p>
+              <p><strong>Vertreten durch:</strong><br>
+              Volker Schwinghammer</p>
+              <p><strong>Anschrift:</strong><br>
+              Sodener Str. 5a<br>
+              63743 Aschaffenburg</p>
+              <p><strong>E-Mail:</strong><br>
+              <a href="mailto:info.demokratie.staerken@gmail.com">info.demokratie.staerken@gmail.com</a></p>
+            </address>
+          </section>
+
+          <section class="section">
+            <h2>Verantwortlich für den <span class="accent">Inhalt</span></h2>
+            <p>Verantwortlich für die Inhalte dieser Website gemäß § 18 Abs. 2 MStV:</p>
+            <div class="notice">
+              <p><strong>Volker Schwinghammer</strong><br>
+              Sodener Str. 5a<br>
+              63743 Aschaffenburg</p>
+            </div>
+          </section>
+
+          <section class="section">
+            <h2>Haftung für <span class="accent">Inhalte</span></h2>
+            <p>Als Diensteanbieter sind wir gemäß § 7 Abs. 1 DDG für eigene Inhalte auf dieser Website nach den allgemeinen Gesetzen verantwortlich. Nach §§ 8 bis 10 DDG sind wir als Diensteanbieter jedoch nicht verpflichtet, übermittelte oder gespeicherte fremde Informationen zu überwachen oder nach Umständen zu forschen, die auf eine rechtswidrige Tätigkeit hinweisen.</p>
+            <p>Verpflichtungen zur Entfernung oder Sperrung der Nutzung von Informationen nach den allgemeinen Gesetzen bleiben hiervon unberührt. Eine Haftung ist jedoch erst ab dem Zeitpunkt der Kenntnis einer konkreten Rechtsverletzung möglich. Bei Bekanntwerden entsprechender Rechtsverletzungen entfernen wir diese Inhalte umgehend.</p>
+          </section>
+
+          <section class="section">
+            <h2>Haftung für <span class="accent">Links</span></h2>
+            <p>Diese Website enthält gegebenenfalls Links zu externen Websites Dritter, auf deren Inhalte wir keinen Einfluss haben. Für die Inhalte der verlinkten Seiten ist stets der jeweilige Anbieter oder Betreiber verantwortlich. Die verlinkten Seiten wurden zum Zeitpunkt der Verlinkung auf mögliche Rechtsverstöße überprüft; eine dauerhafte Kontrolle ist ohne konkrete Anhaltspunkte einer Rechtsverletzung nicht zumutbar.</p>
+          </section>
+
+          <section class="section">
+            <h2>Urheberrecht</h2>
+            <p>Die durch die Seitenbetreiber erstellten Inhalte und Werke auf dieser Website unterliegen dem deutschen Urheberrecht. Vervielfältigung, Bearbeitung, Verbreitung und jede Art der Verwertung außerhalb der Grenzen des Urheberrechts bedürfen der vorherigen schriftlichen Zustimmung der jeweiligen Urheberin oder des jeweiligen Urhebers.</p>
+            <p>Soweit Inhalte auf dieser Website nicht vom Betreiber erstellt wurden, werden die Urheberrechte Dritter beachtet. Inhalte Dritter werden als solche gekennzeichnet, soweit dies möglich ist.</p>
+          </section>
+        </article>
+
+        <aside class="sidebar">
+          <div class="sidebar-card">
+            <h2>Demokratie stärken – Resilienz gegen Extremismus</h2>
+            <p>Eleonora Rachor &amp; Volker Schwinghammer</p>
+          </div>
+          <div class="sidebar-nav">
+            <a href="index.html">Zur Startseite</a>
+            <a href="index.html#kontakt">Kontakt</a>
+          </div>
+        </aside>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <p class="footer-title">Demokratie stärken – Resilienz gegen Extremismus</p>
+      <p>Eleonora Rachor &amp; Volker Schwinghammer</p>
+      <p><a href="impressum.html">Impressum</a></p>
+    </footer>
+  </body>
+</html>
