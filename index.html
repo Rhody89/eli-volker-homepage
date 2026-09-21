@@ -30,9 +30,17 @@
       .site-header { align-items: center; background: rgba(247, 249, 252, .94); border-bottom: 1px solid var(--line); display: flex; justify-content: space-between; padding: 18px clamp(22px, 6vw, 96px); position: sticky; top: 0; z-index: 10; }
       .logo { display: block; width: 500px; }
       .logo img { display: block; height: auto; width: 100%; }
-      nav { display: flex; gap: clamp(18px, 3vw, 42px); }
+      nav { align-items: center; display: flex; }
+      .desktop-nav { gap: clamp(18px, 3vw, 34px); }
       nav a { color: var(--navy); font-size: 17px; font-weight: 700; text-decoration: none; }
       nav a:hover { color: var(--red); }
+      .mobile-nav { display: none; position: relative; }
+      .mobile-nav summary { color: var(--navy); cursor: pointer; font-size: 15px; font-weight: 700; list-style: none; }
+      .mobile-nav summary::-webkit-details-marker { display: none; }
+      .mobile-nav summary:after { content: " +"; color: var(--red); }
+      .mobile-nav[open] summary:after { content: " ×"; }
+      .mobile-nav-links { background: white; border: 1px solid var(--line); box-shadow: 0 12px 30px rgba(16, 38, 95, .12); display: flex; flex-direction: column; gap: 0; min-width: 220px; padding: 8px 0; position: absolute; right: 0; top: calc(100% + 14px); }
+      .mobile-nav-links a { padding: 9px 16px; white-space: nowrap; }
       .hero { background: white; border-bottom: 1px solid var(--line); overflow: hidden; padding: clamp(62px, 9vw, 130px) clamp(22px, 11vw, 170px) clamp(70px, 9vw, 130px); position: relative; }
       .hero:after { background: linear-gradient(135deg, var(--yellow) 0 25%, var(--green) 25% 50%, var(--blue) 50% 75%, var(--red) 75%); border-radius: 50%; content: ""; height: 420px; opacity: .11; position: absolute; right: -120px; top: -170px; width: 420px; }
       .hero-content { margin: 0 auto; max-width: 1250px; position: relative; z-index: 1; }
@@ -81,13 +89,12 @@
       @media (max-width: 800px) {
         .site-header { padding: 14px 22px; }
         .logo { width: 300px; }
-        nav { gap: 16px; }
-        nav a { font-size: 14px; }
+        .desktop-nav { display: none; }
+        .mobile-nav { display: block; }
         .layout { display: block; }
         .sidebar { margin-top: 50px; position: static; }
       }
       @media (max-width: 560px) {
-        nav a:not(:last-child) { display: none; }
         .hero:after { height: 250px; right: -130px; top: -100px; width: 250px; }
         .hero-rule { margin-top: 38px; }
         .background { padding: 22px; }
@@ -104,11 +111,30 @@
       <a class="logo" href="#start" aria-label="Demokratie stärken Startseite">
         <img src="images/Logo.png" alt="Demokratie stärken – Resilienz gegen Extremismus">
       </a>
-      <nav aria-label="Seitennavigation">
+      <nav class="desktop-nav" aria-label="Seitennavigation">
         <a href="#angebot">Angebot</a>
+        <a href="#hintergrund">Hintergrund</a>
         <a href="#module">Module</a>
+        <a href="#zielgruppen">Zielgruppen</a>
+        <a href="#formate">Formate</a>
+        <a href="#ueber-uns">Über uns</a>
         <a href="#kontakt">Kontakt</a>
       </nav>
+      <details class="mobile-nav">
+        <summary>Inhalte</summary>
+        <div class="mobile-nav-links">
+          <a href="#angebot">Angebot</a>
+          <a href="#hintergrund">Hintergrund</a>
+          <a href="#module">Module</a>
+          <a href="#zielgruppen">Zielgruppen</a>
+          <a href="#formate">Formate</a>
+          <a href="#ueber-uns">Über uns</a>
+          <a href="#projektstart">Projektstart</a>
+          <a href="#fragen">Häufige Fragen</a>
+          <a href="#kontakt">Kontakt</a>
+          <a href="impressum.html">Impressum</a>
+        </div>
+      </details>
     </header>
 
     <main id="start">
@@ -241,7 +267,7 @@
             <p>Neben Lernenden richtet sich das Angebot ausdrücklich an Multiplikatorinnen und Multiplikatoren, beispielsweise Lehrkräfte, pädagogische Fachkräfte, Sozialpädagoginnen und Sozialpädagogen sowie weitere Personen, die mit Kindern, Jugendlichen oder Erwachsenen arbeiten.</p>
           </section>
 
-          <section class="section">
+          <section id="formate" class="section">
             <h2>Unsere <span class="accent">Formate</span></h2>
             <h3>Unterrichtsmodule und Workshops</h3>
             <p>Für Schülerinnen und Schüler, Jugendliche und erwachsene Lernende können einzelne Module oder miteinander kombinierte Workshops angeboten werden. Inhalte, Methoden und sprachliche Anforderungen werden an die jeweilige Gruppe angepasst.</p>
@@ -251,7 +277,7 @@
             <p>Für Eltern, pädagogische Fachkräfte, Bildungseinrichtungen und weitere interessierte Gruppen können außerdem Vorträge und Informationsveranstaltungen angeboten werden. Themen, Umfang und Schwerpunkt werden entsprechend dem jeweiligen Bedarf abgestimmt.</p>
           </section>
 
-          <section class="section">
+          <section id="durchfuehrung" class="section">
             <h2>Durchführung und <span class="accent">Multiplikatorenansatz</span></h2>
             <p>Eleonora Rachor und Volker Schwinghammer führen die Bildungsangebote, Unterrichtsmodule, Workshops, Fortbildungen und Veranstaltungen auf Anfrage selbst durch.</p>
             <p>Darüber hinaus können interessierte Multiplikatorinnen und Multiplikatoren mit den Materialien, Inhalten und Methoden vertraut gemacht werden, um ausgewählte Module anschließend in ihrer eigenen pädagogischen Praxis einzusetzen.</p>
@@ -259,7 +285,7 @@
             <p>Dieser Multiplikatorenansatz knüpft an die frühere Weiterentwicklung des Curriculums an, in der bereits Fortbildungsreihen zur Befähigung von Lehrenden sowie eine fachliche Begleitung der Umsetzung vorgesehen waren.</p>
           </section>
 
-          <section class="section">
+          <section id="anfrage" class="section">
             <h2>Von der Anfrage zum passenden <span class="accent">Bildungsangebot</span></h2>
             <ol>
               <li><strong>Kontaktaufnahme</strong> – Sie schildern uns Ihre Einrichtung, Ihre Zielgruppe und Ihren Bedarf.</li>
@@ -270,7 +296,7 @@
             </ol>
           </section>
 
-          <section class="section">
+          <section id="ueber-uns" class="section">
             <h2>Über <span class="accent">uns</span></h2>
             <div class="person-profile">
               <img src="images/Eli.jpg" alt="Eleonora Rachor">
@@ -290,13 +316,13 @@
             </div>
           </section>
 
-          <section class="section">
+          <section id="projektstart" class="section">
             <h2><span class="accent">Projektstart</span></h2>
             <p>Das weiterentwickelte Projekt „Demokratie stärken – Resilienz gegen Extremismus“ startet im Schulhalbjahr 2026/27.</p>
             <p>Unterrichtsmodule, Workshops, Fortbildungen, Vorträge und Informationsveranstaltungen können auf Anfrage individuell an die jeweilige Bildungseinrichtung, Zielgruppe, Altersstufe, Zielsetzung und das vorhandene Sprachniveau angepasst werden.</p>
           </section>
 
-          <section class="section">
+          <section id="fragen" class="section">
             <h2>Häufige <span class="accent">Fragen</span></h2>
             <h3>Müssen immer alle fünf Module durchgeführt werden?</h3>
             <p>Nein. Das Konzept ist modular aufgebaut. Abhängig von Zielgruppe, Zeitrahmen und Zielsetzung können einzelne Module ausgewählt oder mehrere Module miteinander kombiniert werden.</p>
